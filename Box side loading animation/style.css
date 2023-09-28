@@ -1,0 +1,71 @@
+body{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box{
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background: #000;
+}
+
+.box span{
+  position: absolute;
+  background: deeppink;
+}
+
+.dash-i, .dash-iii{
+  width: 2px;
+  height: 0;
+}
+
+.box:focus .dash-i, .box:focus .dash-iii{
+  height: 100%;
+  transition: height 0.2s ease-in-out;
+}
+
+.dash-ii, .dash-iv{
+  width: 0;
+  height: 2px;
+}
+
+.box:focus .dash-ii, .box:focus .dash-iv{
+  width: 100%;
+  transition: width 0.2s ease-in-out;
+}
+
+.dash-i{
+  bottom: 0;
+  left: 0;
+}
+
+.dash-ii{
+  top: 0;
+  left: 0;
+}
+
+.dash-iii{
+  top: 0;
+  right: 0;
+}
+
+.dash-iv{
+  bottom: 0;
+  right: 0;
+}
+
+.box:focus .dash-ii{
+  transition-delay: 0.2s;
+}
+
+.box:focus .dash-iii{
+  transition-delay: 0.4s;
+}
+
+.box:focus .dash-iv{
+  transition-delay: 0.6s;
+}

@@ -1,0 +1,116 @@
+//----------------------------------------//
+
+/* PRELOADER */
+
+let loader = document.querySelector('#preloader')
+
+window.addEventListener('load', function(){
+    loader.style.display = 'none'
+})
+
+
+// NAVBAR FUNCTION //
+
+let list = document.querySelectorAll('.list')
+let menuToggle = document.querySelector('.toggle')
+let navigation = document.querySelector('.navigation')
+
+let body = document.querySelector('#body')
+let settings = document.querySelector('.main-settings')
+
+
+for (let i = 0; i < list.length; i++){
+    list[i].onclick = function(){
+        let j = 0;
+
+        while(j < list.length){
+            list[j++].className = 'list';
+        }
+        
+        list[i].className = 'list active'
+    }
+}
+
+menuToggle.onclick = function(){
+
+    // TOGGLE NAVBAR SECTION
+    menuToggle.classList.toggle('active')
+    navigation.classList.toggle('active')
+}
+
+/* SETTINGS SHOW FUNCTION */
+function SettingsPage(){
+    settings.classList.toggle('settings-show');
+    body.style.overflow = 'hidden';
+    menuToggle.classList.toggle('active')
+    navigation.classList.toggle('active')
+}
+
+/* EXIT SETTINGS */
+function ExitSettings(){
+    settings.className = 'main-settings';
+    body.style.overflow = 'auto';
+}
+
+
+//----------------------------------------//
+
+/* SETTINGS FUNCTION */
+
+let darkmodeBtn = document.querySelector('.darkmode-btn');
+let notificationBtn = document.querySelector('.notification-btn');
+let cookieBtn = document.querySelector('.cookie-btn');
+
+let darkmodeSlider = document.querySelector('.darkmode-slider');
+let notificationSlider = document.querySelector('.notification-slider');
+let cookieSlider = document.querySelector('.cookie-slider');
+
+//DARKMODE FUNCTION
+function DarkmodeBtn(){
+    darkmodeSlider.classList.toggle('lightmode-slider');
+    darkmodeBtn.classList.toggle('lightmode-btn')
+    body.classList.toggle('dark')
+}
+
+//NOTIFICATION FUNCTION
+function NotificationBtn(){
+    notificationSlider.classList.toggle('lightmode-slider');
+    notificationBtn.classList.toggle('lightmode-btn')
+}
+
+//COOKIE FUNCTION
+function CookieBtn(){
+    cookieSlider.classList.toggle('lightmode-slider');
+    cookieBtn.classList.toggle('lightmode-btn')
+}
+
+
+//-----------------------------------------//
+
+/* SIGNOUT FUNCTION  */
+
+let signout = document.querySelector('.signout-prompt')
+
+function SignOut(){
+    signout.classList.toggle('signout-prompt-show')
+}
+
+function _SignOut(){
+    signout.className = 'signout-prompt'
+}
+
+
+//------------------------------------------//
+
+/* PROFILE FUNCTION */
+
+
+let profile = document.querySelector('.profile')
+
+function ProfilePage(){
+    profile.classList.toggle('profile-show')
+}
+
+function _ProfilePage(){
+    profile.className = 'profile'
+}

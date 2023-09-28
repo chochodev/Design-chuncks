@@ -1,0 +1,114 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+*::selection{
+  background: #7a7676;
+  font-family: 'Varela Round';
+}
+
+.settings-body{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(77, 77, 77);
+  position: relative;
+  opacity: 98%;
+}
+
+.exit-settings{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  height: 50px;
+  width: 50px;
+  border-radius: 10px;
+  background: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.exit-settings ion-icon{
+  font-size: 1.2em;
+  color: #0e0e0e;
+}
+
+.settings{
+  width: 350px;
+  max-width: 80vw;
+  height: max-content;
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  border-radius: 10px;
+}
+
+.settings > h2{
+  color: #f0f0f0;
+  font-family: 'Varela Round';
+}
+
+.settings .settings-func{
+  width: 100%;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #f0f0f0;
+  position: relative;
+}
+
+.darkmode-settings, .notification-settings, .cookie-settings{
+  display: flex;
+  justify-content: space-between;
+}
+
+.darkmode-btn, .notification-btn, .cookie-btn{
+  width: 40px;
+  height: 20px;
+  background: #272727;
+  border-radius: 10px;
+  position: relative;
+  transition: .3s;
+}
+
+.darkmode-slider, .notification-slider, .cookie-slider{
+  width: 16px;
+  height: 16px;
+  background: #f0f0f0;
+  border-radius: 50%;
+  position: absolute;
+  left: 2px;
+  bottom: 2px;
+  transition: .3s;
+}
+
+.lightmode-btn{
+  background: #f0f0f0;
+}
+
+.lightmode-slider{
+  left: calc(50% + 2px);
+  background: #4d5bf9;
+}
+
+@media (max-width: 768px){
+  .exit-settings{
+    width: 35px;
+    height: 35px;
+  }
+    
+  .darkmode-settings, .notification-settings, .cookie-settings{
+  }
+}

@@ -1,0 +1,98 @@
+.profile{
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(133, 133, 133);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 98%;
+    overflow: hidden;
+}
+
+.profile-show{
+    z-index: 102;
+    display: flex;
+}
+
+.profile > div{
+    width: 350px;
+    max-width: 80vw;
+    height: max-content;
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+    color: #f0f0f0;
+    font-weight: 600;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    border-radius: 10px;
+}
+
+.profile > div > div{
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile > div img{
+    height: 100px;
+    width: 100px;
+    flex-shrink: 0;
+    object-fit: cover;
+    padding: 5px;
+    background: #f0f0f0;
+    border-radius: 50%;
+}
+
+.profile .profile-form{
+    padding: 10px;
+}
+
+.profile .profile-form .profile-input{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.profile .profile-form .profile-input input{
+    background: transparent;
+    outline: none;
+    padding: 0 0 5px 20px;
+    border-bottom: 1px solid #cdcdcd;
+    color: #f0f0f0;
+    font-size: 18px;
+}
+
+.profile .profile-btn{
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.profile .profile-btn > a{
+    color: #f87373;
+    padding: 5px 10px;
+}
+
+.profile .profile-btn > button{
+    background: #4d5bf9;
+    border-radius: 5px;
+    
+}
+
+.profile .profile-btn > button a{
+    color: #f0f0f0;
+    padding: 5px 10px;
+}
