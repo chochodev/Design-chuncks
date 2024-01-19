@@ -7,10 +7,50 @@
 </head>
 
 <body>
-  <div class="cursor-dot"></div>
-  <div class="cursor-outline"></div>
+  <div id="cursor-dot" class="cursor-dot"></div>
+  <div id="cursor-outline" class="cursor-outline"></div>
 </body>
 
 <script>
+  const cursorDot = document.getElementById("cursor-dot");
+  const cursorOutline = document.getElementById('cursor-outline');
+
+  window.addEventListener('mousemove', function(e) {
+    // GET'S THE CLIENT MOUSE POSITION
+    const posX = e.clientX;
+    const posY = e.clientY;
+
+    // ASSIGNS THE POSITION TO THE DOT
+    // cursorDot.style.left = `${posX}px`;
+    // cursorDot.style.top = `${posY}px`;
+
+    // ASSIGNS THE POSITION TO THE DOT (WITH ANIMATION)
+    cursorDot.animate(
+      { 
+        left: `${posX}px`, 
+        top: `${posY}px`
+      },
+      { 
+        duration: 100, 
+        fill: "forwards"
+      }
+    );
+
+    // ASSIGNS THE POSITION TO THE OUTLINE
+    // cursorOutline.style.left = `${posX}px`;
+    // cursorOutline.style.top = `${posY}px`;
+
+    // ASSIGNS THE POSITION TO THE OUTLINE (WITH ANIMATION)
+    cursorOutline.animate(
+      { 
+        left: `${posX}px`, 
+        top: `${posY}px`
+      },
+      { 
+        duration: 500, 
+        fill: "forwards"
+      }
+    );
+  });
 </script>
 </html>
